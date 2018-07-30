@@ -1,0 +1,415 @@
+
+/*Estilos del diseño de la plantilla*/
+@font-face {
+    font-family:tigo-font;
+    src: url(font/CronosPro-Regular.otf) format("opentype");
+}
+*{ margin: 0; padding: 0; }*
+body { font: .74em tigo-font,Verdana, Arial, tigo-font, Tahoma, sans-serif; line-height: 1.6em; background: #D0D4D4; color: #444; }
+
+a {	color: #B60D0A;	background: inherit; text-decoration: none; }
+a:hover { color: #808080; background: inherit; }
+p { margin: 0 0 15px 0; }
+
+h1 a { color: #fff; background: inherit; }
+h1 a:hover { color: #E4FFD3; background: inherit; }
+sup { font-size: .3em; color: #DFCDA2; }
+
+h3 { color: #808080; background: #D0D4D4; padding: 3px 10px; margin: 0 0 15px; }
+
+#principal { width: 1145px; margin: 10px auto; margin-bottom: 0px; background: #fff; padding: 0px; }
+
+#header { background: white; height: 0px; }
+
+#userarea {
+    background: #2D61A4;
+    height:0px;
+}
+
+#header p { margin: 10px 0 0; color: #D6E5EA; }
+
+#menu { /**margin: 0px 0 0px;*/
+        margin-left: 20px;
+
+        /* background: white url(./../../images/menutop.png) no-repeat ;*/
+        background: white url(./../../images/menuleft.PNG) no-repeat ;
+        height:119px;
+
+}
+
+#logo { padding: 0px 20px 0 20px;  float: right; width: 400px; height: 80px; }
+
+.content { background: white; font-size: .9em;  float: left; width: 1100px; min-height: 500px; height: auto; margin: 0 30px 0px 0px;}
+
+
+#prefooter {  background: white url(./../../images/menubottom.png) no-repeat ; width: 1145px; height: 50px; margin: 0px auto;
+}
+
+#prefooter a {color: #D6E5EA;}
+
+#footer { width: 1100px; margin: 15px auto; color: #808080; font-size: .9em; }
+#footer a { color: #444; }
+.right { float: right; text-align: right; font-size: 1em; }
+#footer .right a { margin: 0 0 0 2px; padding: 3px 10px; }
+#footer .right a:hover { background: #fff; color: #444; text-decoration: underline; }
+
+
+/*Atributos modificables*/
+
+
+.fondopanel{
+    background: white;
+    /*border-color: #2D61A4;*/
+    border-color: #5060BA;
+    border-width: 2px;
+    height: auto;
+}
+
+
+
+.gcolumclase{
+    vertical-align: top;
+}
+
+.fondodialog{
+
+    background: white;
+}
+
+
+/*estilos encabezado*/
+
+.panelencabezado{
+
+    background: white;
+    border-color: gray;
+    height: 70px; width: 635px; margin-top: 10px; margin-left: 10px;
+}
+
+.paneltitulosns{
+
+    background: white;
+    border-color: gray;
+    border-left: white 0px;
+    border-right: white 0px;
+    height: 30px; width: 635px; margin-top: 10px; margin-left: 10px;
+}
+
+.etiquetaIdentificacionDatosEncabezadoCodCli{
+
+    font: bold 12px tigo-font, Arial, Sans-Serif;
+    float: left; margin-left: 20px;
+}
+
+.etiquetaSalidaDatosEncabezadoCodCli{
+
+    font:  12px tigo-font, Arial, Sans-Serif;
+    float: left; margin-left: 16px
+}
+
+.etiquetaIdentificacionDatosEncabezadoNombreCli{
+
+    font: bold 12px tigo-font, Arial, Sans-Serif;
+    float: left; margin-left: 50px;
+}
+
+.etiquetaIdentificacionDatosEncabezadoNombreCliNoejecutivo{
+
+    font: bold 12px tigo-font, Arial, Sans-Serif;
+    float: left; margin-left: 180px;
+}
+
+.etiquetaSalidaDatosEncabezadoNombreCli{
+
+    font:  12px tigo-font, Arial, Sans-Serif;
+    float: left; margin-left: 5px
+}
+
+.etiquetaIdentificacionDatosEncabezadoLimiteAsignado{
+
+    font: bold 12px tigo-font, Arial, Sans-Serif;
+    float: left; margin-left: 20px;
+}
+
+.etiquetaSalidaDatosEncabezadoLimiteAsignado{
+
+    font:  12px tigo-font, Arial, Sans-Serif;
+    float: left; margin-left: 10px
+}
+
+.etiquetaIdentificacionDatosEncabezadoLimiteUsado{
+
+    font: bold 12px tigo-font, Arial, Sans-Serif;
+    float: left; margin-left: 155px;
+}
+
+.etiquetaSalidaDatosEncabezadoLimiteUsado{
+
+    font:  12px tigo-font, Arial, Sans-Serif;
+    float: left; margin-left: 10px
+}
+
+.etiquetaIdentificacionDatosEncabezadoDisponible{
+
+    font: bold 12px tigo-font, Arial, Sans-Serif;
+    float: left; margin-left: 20px;
+}
+
+.etiquetaSalidaDatosEncabezadoDisponible{
+
+    font:  12px tigo-font, Arial, Sans-Serif;
+    float: left; margin-left: 10px
+}
+
+.seleccionarclientelabel{
+    color: black;
+    margin-left: 20px;
+    text-decoration: underline;
+}
+.seleccionarclientelabel:hover{
+    color: blue;
+    margin-left: 20px;
+    text-decoration: underline;
+}
+
+.ui-widget-content {
+    background: white;
+}
+
+/*estilos conteido*/
+
+.etiquetaIdentificacionDatosContent{
+
+    font: bold  15px tigo-font, Arial, Sans-Serif;
+    color: #3BAAE3;
+
+}
+
+.etiquetaSalidaDatosContent{
+
+    font: 15px tigo-font, Arial, Sans-Serif;
+    color: black;
+
+}
+
+h1 { font: bold 18px tigo-font, Arial, Sans-Serif; color: #2D61A4; margin-left: 100px}
+
+h2 {   font: bold 15px tigo-font, Arial, Sans-Serif; color: #2D61A4; }
+
+.separadores{
+
+    border-color: black;
+
+}
+
+.textfields{
+
+
+    font: 12px tigo-font, Arial, Sans-Serif;
+
+}
+
+.cerrarsesionlabel{
+    color: #5060BA;
+    margin-left: 10px;
+    float: right;
+}
+.cerrarsesionlabel:hover{
+    color: #5060BA;
+    margin-left: 10px;
+    float: right;
+}
+
+.iniciarcuentalabel{
+    color: #045FB4;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.iniciarcuentalabel:hover{
+    color: #045FB4;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.estiloetiquetasdelmenuvis{
+
+    margin-top: 10px; color:#f5f8f9;
+    font-weight: bold;
+}
+.estiloetiquetasdelmenuvis:hover{
+
+    margin-top: 10px; color:#000000;
+    height: 20px;
+    font-weight: bold;
+    background: lightsteelblue;
+}
+
+.estilomenuitem{
+
+    margin-top: 10px; color:#f5f8f9;
+    font-weight: bold;
+}
+.estilomenuitem:hover{
+
+    margin-top: 10px; color:#000000;
+    height: 25px;
+    font-weight: bold;
+    background: lightsteelblue;
+}
+
+
+.perfilusuarioetiquetas{
+
+    color: white;
+
+}
+
+.panelperfilusuario{
+
+    float: right; height: 10px; margin-top: 10px;
+}
+
+.panelperfilusuario2{
+
+    float: left; height: 10px; margin-top: -3px; margin-right: 10px;
+}
+
+
+.megamenu{
+
+    margin-top: -20px;
+    border: 0;
+    background: right;
+    float: left; width: 900px; height: 30px;
+    margin-left: 200px;
+    background-color: #5060BA;
+
+}
+
+/*Estilos Login*/
+
+.identificadoresLogin{
+
+    font: bold 15px tigo-font, Arial, Sans-Serif;
+    color:#045491 ;
+
+}
+
+.olvidastepasswordlabel{
+    color:#045491;
+}
+.olvidastepasswordlabel:hover{
+    color: #045491;
+}
+
+.cambiarcuotacomodatolink{
+
+    text-decoration: underline; color: white;margin-left: 20px
+}
+
+.cambiarcuotacomodatolink:hover{
+
+    text-decoration: underline; color: yellow;margin-left: 20px
+}
+
+.panelpublicidad{
+
+    width: 250px; height: 540px; border: 1px; border-color: gray; margin-left: 10px; background: white; margin-top: 10px;
+}
+
+.etiquetaspagbienvenida{
+
+    font:  15px tigo-font, Arial, Sans-Serif; color: #045FB4;
+
+}
+
+.etiquetaspagbienvenida1{
+
+    font: bold 15px tigo-font, Arial, Sans-Serif; color: #045FB4;
+
+}
+
+
+.etiquetaDePie{
+
+    float: right; color: white; margin-right: 10px; margin-top: 15px
+
+}
+
+
+.usrsesionlabel{
+    color: #5060BA;
+    margin-left: 10px;
+    float: right;
+    font-weight:bold;
+}
+.usrsesionlabel:hover{
+    color: #5060BA;
+    margin-left: 10px;
+    float: right;
+    font-weight:bold;
+}
+
+.estilojava{
+    background-color: white;
+    width: auto;
+    height: auto;
+    margin-top: 10px;
+
+}
+
+.estiloTextDin{
+    float: left;
+    width: 180px;
+}
+
+.estiloTextDinCal{
+    float: left;
+
+}
+
+.estiloAreaQuery{
+    width: 500px;
+    min-width: 500px;
+    max-width: 500px;
+
+    height: 200px;
+    min-height: 200px;
+    max-height: 200px;
+}
+
+
+
+.estiloAbol{
+
+  min-width: 200px
+
+}
+
+
+mitemabob:enabled {
+      color: red;
+    }
+    mitemabob:disabled {
+      color: red;
+    }
+    
+    
+     .ui-accordion .ui-icon.ui-icon-triangle-1-e {
+                background-position: -16px -128px;
+            }
+            .ui-accordion .ui-icon.ui-icon-triangle-1-s {
+                background-position: -48px -128px;
+            }
+    
+/*.ui-datatable {
+    display: table;
+}
+
+.ui-datatable table {
+    table-layout: auto !important;
+}*/
+    
+/*Fin de estilos para el diseño de la plantilla*/

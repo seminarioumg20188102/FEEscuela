@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+    <body>
+
+        <ui:composition template="../plantilla/plantilla.xhtml">
+
+            <ui:define name="principal">
+
+            </ui:define>
+
+            <ui:define name="header">
+
+            </ui:define>
+
+            <ui:define name="logo">
+
+            </ui:define>
+
+            <ui:define name="userarea">
+
+            </ui:define>
+
+            <ui:define name="menu">
+
+            </ui:define>
+
+            <ui:define name="clear">
+
+            </ui:define>
+
+            <ui:define name="content">
+
+                <!-- partado de mensajes de error y procesamiento -->
+
+
+                <p:ajaxStatus onstart="PF('statusDialog').show();" onsuccess="PF('statusDialog').hide();"/>
+
+                <p:dialog modal="true" widgetVar="statusDialog" header="Procesando"
+                          draggable="false" closable="false" resizable="false">
+                    <p:graphicImage value="./../../images/procesando.gif" />
+                </p:dialog>
+                <p:growl id="growl" showDetail="false" life="4500" />
+                <!-- fin partado de mensajes de error y procesamiento -->
+
+                <p:panel  styleClass="fondopanel"    style="height: 360px; width: 635px; margin-top: 0px; margin-bottom: 10px ; margin-left:0px; border:0px" >
+
+                </p:panel>
+
+                <p:dialog id="loginDlg" showEffect="clip" showHeader="false" width="400" height="300"  header="Login" draggable="false"   widgetVar="loginDialog" modal="false" closable="false" resizable="false" style="background: white">
+                    <center>
+                        <h:panelGrid columns="2" border="0">
+                            <h:panelGrid columns="1">
+                                <h1 style="margin-top: 10px; margin-left: 0px; color: black; font-weight: bold; font-size: 3.5em">Login</h1>
+                            </h:panelGrid>
+
+                            <h:panelGrid columns="1">
+                                <h1 style="margin-top: 10px; margin-left: 5px;  color: black; font-weight: bold; font-size: 1.5em"></h1>
+                            </h:panelGrid>
+                        </h:panelGrid>
+                    </center>
+                    <p:separator ></p:separator>
+                    <h:form id="form">
+
+                        <h:panelGrid id="displayloginf" columns="1" cellspacing="10"  style="margin:10px 0px 0px 30px">
+
+                            <h:outputLabel for="username" value="Usuario:" styleClass="identificadoresLogin" />
+                            <p:inputText value="#{beanLogin.usuario}" maxlength="50" label="Usuario"  id="username"  style="width: 250px;font-family: sans-serif; "/>
+
+
+ 
+
+
+                            <h:outputLabel for="password"  value="Contraseña:" styleClass="identificadoresLogin"/>
+
+                            <p:password  value="#{beanLogin.password}" maxlength="10"  id="password"  label="Password"  style="width:250px;"></p:password>
+
+                        </h:panelGrid>
+
+                        <h:panelGrid columns="2">
+                            <f:facet name="footer">
+                                <p:commandButton  id="loginButton"  icon="ui-icon-check" value="Ingresar" update=":growl" actionListener="#{beanLogin.validarCredenciales}"  style="margin-left: 220px; margin-top: 10px" />
+                            </f:facet>
+
+
+
+                        </h:panelGrid>
+
+
+                    </h:form>
+                </p:dialog>
+
+                <!-- Fin de dialogo de recuperacion de login-->
+
+
+
+
+                <!--inicio de codigo javascript-->
+                <script type="text/javascript">
+                    window.onload = function () {
+
+                        PF('loginDialog').show();
+                    }
+
+                </script>
+                <!--fin de codigo javascript-->
+            </ui:define>
+            <ui:define name="contentFooter"></ui:define>
+
+            <ui:define name="clear2">
+
+            </ui:define>
+
+            <ui:define name="prefooter">
+                <h:outputLabel styleClass="etiquetaDePie"></h:outputLabel>
+            </ui:define>
+
+            <ui:define name="footer">
+
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+    <body>
+
+        <ui:composition template="../plantilla/plantilla.xhtml">
+
+            <ui:define name="principal">
+
+            </ui:define>
+
+            <ui:define name="header">
+
+            </ui:define>
+
+            <ui:define name="logo">
+
+            </ui:define>
+
+            <ui:define name="userarea">
+
+            </ui:define>
+
+            <ui:define name="menu">
+
+            </ui:define>
+
+            <ui:define name="clear">
+
+            </ui:define>
+
+            <ui:define name="content">
+
+                <!-- partado de mensajes de error y procesamiento -->
+                <p:ajaxStatus onstart="statusDialog.show();" onsuccess="statusDialog.hide();"/>
+
+                <p:dialog modal="true" widgetVar="statusDialog" header="Procesando"
+                          draggable="false" closable="false" resizable="false">
+                    <p:graphicImage value="./../../images/procesando.gif" />
+                </p:dialog>
+                <p:growl id="growl" showDetail="false" life="4500" />
+                <!-- fin partado de mensajes de error y procesamiento -->
+
+               <h:form id="form">
+                    <h1 style="padding-top: 15px">Validación de accesos</h1>
+                    <p:panel  styleClass="fondopanel" style="width: auto; margin: 0px 120px 10px; border: 0">
+                        <h1 style=" margin: 130px 210px 0px; border:0">Lo sentimos, no tienes acceso a esta opción del Portal Web</h1>
+                        <h:panelGrid border="0" columns="2" style=" margin-top: 10px; margin-left: 380px; border: 0">
+                            <p:commandButton id="cancelarbutton" value="Salir" icon="ui-icon-closethick" action="#{beanLogin.logout}"></p:commandButton>
+                        </h:panelGrid>
+                    </p:panel>
+                </h:form>
+
+
+
+                <!-- Fin de dialogo de recuperacion de login-->
+
+
+
+
+                <!--fin de codigo javascript-->
+            </ui:define>
+            <ui:define name="contentFooter"></ui:define>
+
+            <ui:define name="clear2">
+
+            </ui:define>
+
+            <ui:define name="prefooter">
+                <h:outputLabel styleClass="etiquetaDePie"></h:outputLabel>
+            </ui:define>
+
+            <ui:define name="footer">
+
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

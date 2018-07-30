@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://garantiasws.proyecto.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://garantiasws.proyecto.com/">
+
+<xs:element name="consultaMenuOpciones" type="tns:consultaMenuOpciones" />
+
+<xs:element name="consultaMenuOpcionesResponse" type="tns:consultaMenuOpcionesResponse" />
+
+<xs:element name="enviaMenu" type="tns:enviaMenu" />
+
+<xs:element name="enviaMenuResponse" type="tns:enviaMenuResponse" />
+
+<xs:element name="opcionMetodo" type="tns:opcionMetodo" />
+
+<xs:element name="opcionMetodoResponse" type="tns:opcionMetodoResponse" />
+
+<xs:element name="opcionesMetodo" type="tns:opcionesMetodo" />
+
+<xs:element name="opcionesMetodoResponse" type="tns:opcionesMetodoResponse" />
+
+<xs:element name="validaCredenciales" type="tns:validaCredenciales" />
+
+<xs:element name="validaCredencialesResponse" type="tns:validaCredencialesResponse" />
+
+<xs:complexType name="opcionMetodo">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="opcionMetodoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:opcion" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="opcion">
+<xs:sequence>
+<xs:element name="codigo" type="xs:string" minOccurs="0" />
+<xs:element name="codigoMenu" type="xs:string" minOccurs="0" />
+<xs:element name="descripcion" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="validaCredenciales">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="validaCredencialesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:respuestaLogin" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="respuestaLogin">
+<xs:sequence>
+<xs:element name="codcobs" type="tns:respuesta" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="xml" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="respuesta">
+<xs:sequence>
+<xs:element name="beeper" type="xs:string" minOccurs="0" />
+<xs:element name="codigo" type="xs:string" minOccurs="0" />
+<xs:element name="descripcion" type="xs:string" minOccurs="0" />
+<xs:element name="email" type="xs:string" minOccurs="0" />
+<xs:element name="idServicio" type="xs:string" minOccurs="0" />
+<xs:element name="idguia" type="xs:string" minOccurs="0" />
+<xs:element name="mensaje" type="xs:string" minOccurs="0" />
+<xs:element name="mensajemail" type="xs:string" minOccurs="0" />
+<xs:element name="nomcli" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="opcionesMetodo">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="opcionesMetodoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:opciones" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="opciones">
+<xs:sequence>
+<xs:element name="opciones" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="consultaMenuOpciones">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="consultaMenuOpcionesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:respuestaMenu" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="respuestaMenu">
+<xs:sequence>
+<xs:element name="menus" type="tns:menu" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="menu">
+<xs:sequence>
+<xs:element name="activo" type="xs:string" minOccurs="0" />
+<xs:element name="codigo" type="xs:string" minOccurs="0" />
+<xs:element name="descripcion" type="xs:string" minOccurs="0" />
+<xs:element name="encontrado" type="xs:boolean" />
+<xs:element name="opciones" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="padre" type="xs:string" minOccurs="0" />
+<xs:element name="portal" type="xs:string" minOccurs="0" />
+<xs:element name="prioridad" type="xs:int" />
+<xs:element name="submenu" type="xs:string" minOccurs="0" />
+<xs:element name="url" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enviaMenu">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enviaMenuResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:menu" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

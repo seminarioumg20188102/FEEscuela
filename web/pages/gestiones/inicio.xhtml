@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+    <body>
+
+        <ui:composition template="../plantilla/plantilla.xhtml">
+
+            <ui:define name="principal">
+
+            </ui:define>
+
+            <ui:define name="header">
+
+            </ui:define>
+
+            <ui:define name="logo">
+                <h:form>
+                    <h:panelGrid columns="1" border="0"  styleClass="panelperfilusuario">
+
+                        <h:panelGrid columns="1" border="0"  >
+                            <h:outputLabel  value="#{beanLogin.usuario}" styleClass="usrsesionlabel"></h:outputLabel>
+                            <h:commandLink  id="logout" value="Cerrar Sesión"   action="#{beanLogin.logout}" styleClass="cerrarsesionlabel" ></h:commandLink>
+                        </h:panelGrid>
+
+
+
+
+
+
+                    </h:panelGrid>
+
+
+
+
+
+                </h:form>
+            </ui:define>
+
+            <ui:define name="userarea">
+
+            </ui:define>
+
+            <ui:define name="menu">
+
+            </ui:define>
+
+            <ui:define name="clear">
+
+            </ui:define>
+
+            <ui:define name="content">
+
+
+
+
+                <!-- partado de mensajes de error y procesamiento -->
+
+
+                <p:dialog modal="true" widgetVar="statusDialog" header="Procesando"
+                          draggable="false" closable="false" resizable="false">
+                    <p:graphicImage value="./../../images/procesando.gif" />
+                </p:dialog>
+
+                <!-- fin partado de mensajes de error y procesamiento -->
+
+
+
+                <h:panelGrid border="0" columnClasses="gcolumclase"  columns="2">
+
+
+                    <h:form id="formMen">
+
+
+
+
+
+                        <p:tieredMenu model="#{beanMenu.modal}"  style="margin-left: 10px"  >
+
+
+
+
+                        </p:tieredMenu>
+
+                    </h:form>
+
+
+
+
+
+                    <p:panel  styleClass="fondopanel" style="height: auto; width: 900px; margin-top: 0px;  margin-left:20px; border: 0px "  >
+
+
+                        
+
+
+
+
+                    </p:panel>
+                </h:panelGrid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- Fin de dialogo de recuperacion de login-->
+
+                <script type="text/javascript" charset="iso-8859-1">
+
+                    PrimeFaces.widget.DefaultCommand = PrimeFaces.widget.BaseWidget.extend({
+                        init: function (b) {
+                            this.cfg = b;
+                            this.id = this.cfg.id;
+                            this.jqId = PrimeFaces.escapeClientId(this.id);
+                            this.jqTarget = $(PrimeFaces.escapeClientId(this.cfg.target));
+                            var a = this;
+                            this.jqTarget.parents("form:first").keypress(function (d) {
+                                var c = $.ui.keyCode;
+                                if (d.which == c.ENTER) {
+                                    a.jqTarget.click();
+                                    d.preventDefault()
+                                }
+                            });
+                            $(this.jqId + "_s").remove()
+                        }
+                    });
+
+
+                    $(document).unbind('keydown').bind('keydown', function (event) {
+
+                        var doPrevent = false, elem;
+
+                        if (event.keyCode === 8) {
+                            elem = event.srcElement || event.target;
+                            if ($(elem).is(':input')) {
+                                doPrevent = elem.readOnly || elem.disabled;
+                            } else {
+                                doPrevent = true;
+                            }
+                        }
+
+                        if (doPrevent) {
+                            event.preventDefault();
+                            return false;
+                        }
+                    });
+
+                </script>
+
+
+                <!--fin de codigo javascript-->
+            </ui:define>
+            <ui:define name="contentFooter"></ui:define>
+
+            <ui:define name="clear2">
+
+            </ui:define>
+
+            <ui:define name="prefooter">
+
+
+                <h:outputLabel styleClass="etiquetaDePie"></h:outputLabel>
+
+
+
+            </ui:define>
+
+            <ui:define name="footer">
+
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link type="image/png" rel="shortcut icon" href="./../../favicon.PNG"/>
+        <link href="./../../resources/css/tableLayout.css" rel="stylesheet" type="text/css" media="screen" />
+        <title>Portal de Garantias</title>
+
+        <script type="text/javascript">
+function toggle(div) {
+  var elem = document.getElementById(div);
+  if (elem.style.display=='') {elem.style.display='none'; return;}
+  elem.style.display='';
+}
+        </script>
+        
+        <script type="text/javascript"> //<![CDATA[ 
+var tlJsHost = ((window.location.protocol == "https:") ? "https://secure.comodo.com/" : "http://www.trustlogo.com/");
+document.write(unescape("%3Cscript src='" + tlJsHost + "trustlogo/javascript/trustlogo.js' type='text/javascript'%3E%3C/script%3E"));
+//]]>
+</script>
+
+    </h:head>
+
+
+    <body>
+        <div id="principal">
+
+            <ui:insert name="principal"></ui:insert>
+
+            <div id="header">
+
+                <ui:insert name="header"></ui:insert>
+
+                <div id="logo">
+                    <ui:insert name="logo"></ui:insert>
+
+                </div>
+
+            </div>
+            <div id="userarea">
+                <ui:insert name="userarea"></ui:insert>
+
+            </div>
+
+            <div id="menu">
+                <ui:insert name="menu"></ui:insert>
+
+            </div>
+
+            <div style="clear: both;"><ui:insert name="clear"></ui:insert></div>
+
+            <div class="content">
+                <ui:insert name="content"></ui:insert>
+
+            </div>
+
+            <div style="clear: both;"><ui:insert name="clear2"></ui:insert></div>
+        </div>
+        <div id="prefooter">
+            <ui:insert name="prefooter"></ui:insert>
+        </div>
+        <div id="footer">
+            <ui:insert name="footer">
+
+             
+                
+            </ui:insert>
+
+        </div>
+          
+    </body>
+
+    
+
+    
+</html>
